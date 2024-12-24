@@ -1,0 +1,24 @@
+---
+title: "데이터과학 툴박스 (2024)"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: table
+  categories: true
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: false
+---
+
+**수업계획**
+
+- 1월2일(화) -- 18:00~21:00 day1 수업
+- 1월3일(수) -- 18:00~21:00 day2 수업
+- 1월4일(목) -- 18:00~21:00 day3 수업
+- 1월5일(금) -- 18:00~21:00 day4 수업
+- 1월8일(월) -- 19:00~21:00 Q&A
+- 1월9일(화) -- 18:00~21:00 Q&A
+- 1월10일(수) -- 18:00~21:00 day5 수업
+- 1월11일(목) -- 수업 X, Q&A X
+- 1월12일(금) -- 18:00~21:00 day6 수업

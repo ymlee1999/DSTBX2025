@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "2024-01-DSTBX2024"
+  navbar:
+    left: 
+      - day4.qmd  
+    right:
+      - icon: github
+        href: https://github.com/guebin/DSTBX2024
+      - icon: youtube
+        href: https://www.youtube.com/channel/UCQk9RyBNgXc7ORIsYlOfQrg/playlists?view=50&sort=dd&shelf_id=2        
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+
+
+

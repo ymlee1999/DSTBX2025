@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.533">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="최규빈">
+<meta name="dcterms.date" content="2024-12-26">
+
+<title>2024-01-DSTBX2024 - Day1: 실습1 - 실습12</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">2024-01-DSTBX2024</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="dropdown-header">
+ <span class="menu-text">day4.qmd</span></li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/guebin/DSTBX2024"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.youtube.com/channel/UCQk9RyBNgXc7ORIsYlOfQrg/playlists?view=50&amp;sort=dd&amp;shelf_id=2"> <i class="bi bi-youtube" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Day1: 실습1 - 실습12</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>최규빈 </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 26, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="터미널의-이해" class="level2">
+<h2 class="anchored" data-anchor-id="터미널의-이해">1. 터미널의 이해</h2>
+<p><code>-</code> 윈도우 컴퓨터에서 아래의 명령어가 뭘 의미하는지 살펴보자.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dir</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> asdf</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">cd..</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>외우세요: 터미널을 열어준다 = 컴퓨터에 대한 제어권을 준다</p>
+</blockquote>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>강의노트의 숨은 의도</strong>: 터미널명령어 숙지의 중요성을 이해했으면..</p>
+</div>
+</div>
+</section>
+<section id="파이썬-설치방법-조사" class="level2">
+<h2 class="anchored" data-anchor-id="파이썬-설치방법-조사">2. 파이썬 설치방법 조사</h2>
+<p><code>-</code> 파이썬 배우는 초보자에게 가장 어려운것! - 선생님마다 설치하는 방법이 모두 다름</p>
+<p><code>-</code> 왜 저렇게 설치방법이 다른가? 왜 다른 방법으로 각각 파이썬을 실행하는가? 이런것이 너무 어려움 - <a href="https://wikidocs.net/8">방법1:</a> 파이썬프로그램 다운로드 -&gt; 시작버튼 눌러서 설치 - <a href="https://wikidocs.net/44">방법2:</a> 아나콘다 설치 (그럼 자동으로 파이썬이 설치됨) - 방법3: 아나콘다 설치 + 가상환경 - …</p>
+<p><code>-</code> 심지어 실행하는것도 다름 - <a href="https://goddaehee.tistory.com/286">방법1:</a> 파이썬 프롬프트 - <a href="https://null-0.tistory.com/11">방법2:</a> .py를 이용하여 실행? - <a href="https://null-0.tistory.com/11">방법3:</a> IDLE - <a href="https://tariat.tistory.com/73">방법4:</a> 파이참 - <a href="https://shlee1990.tistory.com/963">방법5:</a> 스파이더 - <a href="https://www.codingfactory.net/11337">방법6:</a> Visual Studio Code - 방법7: 주피터노트북, 주피터랩 - 가상환경을 만들어서 해라.. - 아나콘다 네비게이터에 주피터가 있다.. - …</p>
+<p><code>-</code> 머리아프니까 collab을 쓰라는 사람도 있음. 아니면 도커이미지를 줄테니까 그걸 쓰라는 사람도 있음. AWS를 쓰라는 사람도 있음..</p>
+<p><code>-</code> 핵심: 그냥 (1) 컴퓨터에 (2) 파이썬을 깔아서 (3) 실행하는 것임</p>
+<p><code>-</code> 의문: 그런데 방법이 왜이렇게 많은가? 엑셀처럼 프로그램 설치하고 아이콘 더블클릭하면 끝나는 식으로 만들어야 하는것 아닌가?</p>
+</section>
+<section id="python-실행하고-살펴보기" class="level2">
+<h2 class="anchored" data-anchor-id="python-실행하고-살펴보기">3. <code>python</code> 실행하고 살펴보기</h2>
+<p><code>-</code> 윈도우에서 anaconda prompt 실행 -&gt; python</p>
+<pre><code>(base) C:\Users\python&gt;python
+Python 3.9.7 (default, Sep 16 2021, 16:59:28) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; [1,2,3]+[4]
+[1, 2, 3, 4]
+&gt;&gt;&gt; a=[1,2,3]+[4]
+&gt;&gt;&gt; a
+[1, 2, 3, 4]</code></pre>
+<p><code>-</code> 2개를 실행할 수도 있음. (두 환경은 각각 서로 독립적인 파이썬, 변수가 공유되지 않음) <span class="math inline">\(\star\)</span></p>
+<p><code>-</code> 아쉬운점: `?list’와 같이 도움말 기능이 동작하지 않음</p>
+<pre><code>&gt;&gt;&gt; ?list
+  File "&lt;stdin&gt;", line 1
+    ?list
+    ^
+SyntaxError: invalid syntax
+&gt;&gt;&gt; </code></pre>
+</section>
+<section id="python-으로-코딩하기-최악" class="level2">
+<h2 class="anchored" data-anchor-id="python-으로-코딩하기-최악">4. <code>python</code> 으로 코딩하기 (최악)</h2>
+<p><code>-</code> 1부터 10까지 합을 구하는 프로그램을 만들고 싶음</p>
+<p><code>-</code> 시도1: python을 키고 아래와 같이 실행</p>
+<pre><code>(base) C:\Users\python&gt;python
+Python 3.9.7 (default, Sep 16 2021, 16:59:28) [MSC v.1916 64 bit (AMD64)] :: Anaconda, Inc. on win32
+Type "help", "copyright", "credits" or "license" for more information.
+&gt;&gt;&gt; total = 0
+&gt;&gt;&gt; for i in range(10):
+...     total=total+i
+...
+&gt;&gt;&gt; total
+45
+&gt;&gt;&gt;</code></pre>
+<p><code>-</code> 반성: 정답은 55인데 45가 출력되었다! <span class="math inline">\(\to\)</span> range(10)을 range(1,11)으로 바꿔야겠다!</p>
+<p><code>-</code> 시도2: range(1,11)을 바꿔야겠다고 생각하고 다시 입력하다가 오타가 발생</p>
+<pre><code>&gt;&gt;&gt; total =0
+&gt;&gt;&gt; for i in range(1,11):
+...     total = totla +i
+...</code></pre>
+<ul>
+<li>앗 totla이라고 잘못쳤다.</li>
+</ul>
+<p><code>-</code> 반성: 다음에는 정신을 똑바로 차려야겠다.</p>
+</section>
+<section id="ipython-실행하고-살펴보기" class="level2">
+<h2 class="anchored" data-anchor-id="ipython-실행하고-살펴보기">5. <code>ipython</code> 실행하고 살펴보기</h2>
+<p><code>-</code> 윈도우에서 anaconda prompt 실행 -&gt; ipython</p>
+<pre><code>(base) C:\Users\python&gt;ipython
+Python 3.9.7 (default, Sep 16 2021, 16:59:28) [MSC v.1916 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.29.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: a=[1,2,3]
+
+In [2]: a
+Out[2]: [1, 2, 3]
+
+In [3]: a+[4]
+Out[3]: [1, 2, 3, 4]</code></pre>
+<p><code>-</code> ?list가 가능</p>
+<pre><code>In [4]: ?list
+Init signature: list(iterable=(), /)
+Docstring:
+Built-in mutable sequence.
+
+If no argument is given, the constructor creates a new empty list.
+The argument must be an iterable if specified.
+Type:           type
+Subclasses:     _HashedSeq, StackSummary, DeferredConfigList, SList, _ImmutableLineList, FormattedText, NodeList, _ExplodedList, Stack, _Accumulator, ...
+</code></pre>
+<p><code>-</code> 색깔이 알록달록해서 문법을 보기 편하다. (구문강조)</p>
+</section>
+<section id="ipython-으로-코딩하기" class="level2">
+<h2 class="anchored" data-anchor-id="ipython-으로-코딩하기">6. <code>ipython</code> 으로 코딩하기</h2>
+<p><code>-</code> ipython을 사용한 프로그래머는 좀더 상황이 낫다</p>
+<pre><code>(base) C:\Users\python&gt;ipython
+Python 3.9.7 (default, Sep 16 2021, 16:59:28) [MSC v.1916 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.29.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: total = 0
+
+In [2]: for i in range(1,11):
+   ...:     total = total + i
+   ...:
+
+In [3]: total
+Out[3]: 55</code></pre>
+</section>
+<section id="메모장-python" class="level2">
+<h2 class="anchored" data-anchor-id="메모장-python">7. 메모장 + <code>python</code></h2>
+<p><code>-</code> 메모장을 키고 아래의 내용을 적는다.</p>
+<pre><code>total = 0 
+for i in range(1,11): 
+    total = total + i
+print(total)</code></pre>
+<p><code>-</code> 파일이름을 <code>mysum.py</code>로 저장한다.</p>
+<p><code>-</code> anaconda prompt에서 <code>mysum.py</code>파일이 저장된 폴더로 이동 -&gt; 실행</p>
+<pre><code>(base) C:\Users\python&gt;cd Desktop
+
+(base) C:\Users\python\Desktop&gt;dir
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: 9AFD-A05F
+
+ C:\Users\python\Desktop 디렉터리
+
+2022-03-27  오전 11:32    &lt;DIR&gt;          .
+2022-03-27  오전 11:32    &lt;DIR&gt;          ..
+2022-03-27  오전 12:01             2,306 Chrome.lnk
+2022-03-26  오후 08:32             2,332 Microsoft Edge.lnk
+2022-03-27  오전 11:33                71 mysum.py
+               3개 파일               4,709 바이트
+               2개 디렉터리  743,643,467,776 바이트 남음
+
+(base) C:\Users\python\Desktop&gt;python mysum.py
+55
+
+(base) C:\Users\python\Desktop&gt;</code></pre>
+<p><code>-</code> 소감 - 편한점1: 마우스를 이용하여 이동가능 - 편한점2: 내가 작업한 내용은 바탕화면의 메모장에 저장이 되어있음 - 아쉬운점: ipython의 장점은 활용못함 (구문강조, 도움말기능)</p>
+</section>
+<section id="메모장-ipython" class="level2">
+<h2 class="anchored" data-anchor-id="메모장-ipython">8. 메모장 + <code>ipython</code></h2>
+<p><code>-</code> 전체적인 개발방식 - 메모장: 코드를 편집, 저장 - ipython: <strong>anaconda prompt처럼 메모장의 코드를 실행하고 결과를 확인</strong> + 구문강조, 도움말확인기능 등을 이용하여 짧은 코드를 빠르게 작성</p>
+<p><code>-</code> 기능 - ipython에서 <strong>!python mysum.py</strong>를 입력하면 anaconda prompt에서 <strong>python mysum.py</strong>를 입력한 것과 같은 효과 - ipython에서 <strong>%run mysum</strong>을 입력하면 메모장에서 mysum.py에 입력된 내용을 복사해서 ipython에 붙여넣어 실행한것과 같은 효과</p>
+</section>
+<section id="ide통합개발환경의-등장" class="level2">
+<h2 class="anchored" data-anchor-id="ide통합개발환경의-등장">9. IDE(통합개발환경)의 등장</h2>
+<p><code>-</code> 메모장과 ipython을 하나로 통합한 프로그램이 등장!</p>
+<ul>
+<li>jupyter notebook, jupyter lab</li>
+<li>spyder</li>
+<li>idle</li>
+<li>VScode</li>
+<li>…</li>
+</ul>
+<p><code>-</code> 주피터노트북, 혹은 주피터랩을 켜보자.</p>
+<ul>
+<li>셀에서 1+1 수행</li>
+<li>셀에서 <code>!dir</code> 등의 명령어 실행</li>
+</ul>
+<p><code>-</code> 주피터의 트릭 (실제로 주피터는 ipython에 기생할 뿐 아무런 역할도 안해요)</p>
+<ol type="1">
+<li><p>주피터를 실행</p></li>
+<li><p>새 노트북을 생성</p></li>
+</ol>
+<ul>
+<li>컴퓨터는 내부적으로 ipython을 실행하고 그 ipython이랑 여러분이 방금만든 그 노트북과 연결</li>
+</ul>
+<ol start="3" type="1">
+<li>처음보이는 cell에 1+1을 입력 -&gt; 쉬프트엔터 -&gt; 결과2가 출력</li>
+</ol>
+<ul>
+<li>처음보이는 cell하나 = 자동으로 열린 하나의 메모장</li>
+<li>cell 1+1을 입력 = 메모장에 1+1을 적음</li>
+<li>쉬프트+엔터후 결과2를 출력 = cell의 내용을 복사 -&gt; ipython에 붙여넣음 -&gt; ipython 계산된 결과를 복사 -&gt; cell로 돌아와 붙여넣기</li>
+</ul>
+<ol start="4" type="1">
+<li>새로운 cell을 추가하고 2+2을 입력 -&gt; 쉬프트엔터 -&gt; 결과4가 출력</li>
+</ol>
+<ul>
+<li>새로운 cell을 추가 = 새로운 메모장 추가</li>
+<li>cell 2+2을 입력 = 새로운 메모장에 2+2를 적음</li>
+<li>쉬프트+엔터후 결과4를 출력 = cell의 내용을 복사 -&gt; ipython에 붙여넣음 -&gt; ipython 계산된 결과를 복사 -&gt; cell로 돌아와 붙여넣기</li>
+</ul>
+<p><code>-</code> 중요한 사실들 - IDE는 내부적으로 연산을 수행하는 능력이 없다. (생각해볼것: 왜 R을 꼭 설치하고 Rstudio를 설치해야 했을까?) - 주피터에서 커널을 재시작한다는 의미는 메모장이 열린채로 ipython을 껐다가 다시 실행한다는 의미 - 주피터는 단순히 ’메모장의 내용을 복사하여 붙여넣는 기계’라고 볼 수 있다. 이렇게 생각하면 주피터는 꼭 ipython에 연결할 이유는 없다. 실제로 주피터에 R을 연결해서 쓸 수 있다. <strong>즉 하나의 IDE가 여러개의 언어와 연결될 수 있다.</strong> - Jupyterlab이라는 프로그램은 크롬에 있는 내용과 ipython간의 통신을 제어하는 프로그램일 뿐이다.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>강의노트의 숨은의도</strong>: Language, Kernel, IDE 의 차이점을 이해했으면..</p>
+</div>
+</div>
+</section>
+<section id="원격컴퓨터server-클라우드컴퓨터colab의-등장" class="level2">
+<h2 class="anchored" data-anchor-id="원격컴퓨터server-클라우드컴퓨터colab의-등장">10. 원격컴퓨터(server), 클라우드컴퓨터(colab)의 등장</h2>
+<p><code>-</code> 지금까지는 ipython이 실행되는 컴퓨터와 크롬이 실행되는 컴퓨터가 동일하다는 전제였음.</p>
+<p><code>-</code> 생각해보니까 어차피 ipython이 실행된 컴퓨터에서 내가 크롬에 입력한 명령 “전달”되기만 하면 되므로 꼭 같은 컴퓨터일 필요는 없다.</p>
+<section id="a.-모델1-원격컴퓨터-일대일" class="level3">
+<h3 class="anchored" data-anchor-id="a.-모델1-원격컴퓨터-일대일">A. 모델1: 원격컴퓨터 (일대일)</h3>
+<p><code>-</code> 준비상태</p>
+<ul>
+<li>학과서버: ipython을 실행 + 이 컴퓨터는 인터넷 연결이 되어있어야함</li>
+<li>규빈노트북: 크롬실행 + 이 컴퓨터도 인터넷이 연결되어 있어야함</li>
+</ul>
+<p><code>-</code> 명령입력</p>
+<ul>
+<li>규빈노트북의 크롬에서 1+1을 입력하고 쉬프트 엔터를 누름</li>
+</ul>
+<p><code>-</code> 규빈노트북 -&gt; 학과서버</p>
+<ul>
+<li>규빈노트북의 내부의 어떤프로그램은 1+1이라는 명령을 복사하여 카카오톡으로 학과서버에 전달</li>
+<li>학과서버 내부의 어떤프로그램은 1+1이라는 명령을 카톡으로 받아서 그것을 ipython에게 전달</li>
+</ul>
+<p><code>-</code> 학과서버 -&gt; 규빈노트북</p>
+<ul>
+<li>학과서버 내부의 ipython은 2라는 출력결과를 계산함</li>
+<li>학과서버 내부의 어떤프로그램은 계산결과를 카톡으로 규빈노트북에 알려줌</li>
+<li>규빈은 본인 노트북에서 편하게 계산결과를 받아볼 수 있다.</li>
+</ul>
+</section>
+<section id="b.-모델1-원격컴퓨터-일대다" class="level3">
+<h3 class="anchored" data-anchor-id="b.-모델1-원격컴퓨터-일대다">B. 모델1: 원격컴퓨터 (일대다)</h3>
+<p><code>-</code> 개념: 2개 이상의 ipython 커널을 각각 다른 메모장에 연결가능.</p>
+<p><code>-</code> 확장개념:</p>
+<ol type="1">
+<li>2개 ipython 커널을 생성. 편의상 각각을 커널A,커널B라고 하자.</li>
+<li>커널A는 규빈노트북의 메모장에 커널B는 영미노트북의 메모장에 연결한다.</li>
+<li>영미와 규빈은 각각 독립적으로 작업가능</li>
+</ol>
+<p><code>-</code> 의문?</p>
+<ul>
+<li>규빈은 python==3.10 을 쓰고 싶고 영미는 python==3.12 를 쓰고 싶다면??</li>
+<li>학과서버에 python==3.10 과 python==3.12 가 동시에 깔려야함.</li>
+<li>원래는 불가능하지만 “가상환경” 이라는 개념을 도입하면 가능하다. <span class="math inline">\(\to\)</span> 아나콘다의 등장</li>
+</ul>
+</section>
+<section id="c.-모델2-클라우드-컴퓨터-google-colab" class="level3">
+<h3 class="anchored" data-anchor-id="c.-모델2-클라우드-컴퓨터-google-colab">C. 모델2: 클라우드 컴퓨터 (google colab)</h3>
+<p><code>-</code> 구글코랩</p>
+<ul>
+<li>구글에 여러가지 성능을 가진 컴퓨터가 <span class="math inline">\(n\)</span>대 있음. 이 컴퓨터들을 연결하여 하나의 거대한 컴퓨터처럼 동작하게 만듦.</li>
+<li>이 컴퓨터는 학과서버처럼 동작함. 즉 여러명에게 컴퓨팅 자원을 분배함.</li>
+</ul>
+<p><code>-</code> 구글코랩과 비슷한 방식으로 코드스페이스가 있음.</p>
+</section>
+</section>
+<section id="원격제어-맥북" class="level2">
+<h2 class="anchored" data-anchor-id="원격제어-맥북">12. 원격제어 (맥북)</h2>
+<p><code>-</code> <code>ssh</code>를 이용한 접속</p>
+<p><code>-</code> 질문: 여기서 파이썬을 키면? 어떤 컴퓨터 spec으로 계산될까?</p>
+<p><code>-</code> 한계점: <code>ssh</code>는 동일네트워크내에서만 동작한다. (진짜?)</p>
+</section>
+<section id="local-remote" class="level2">
+<h2 class="anchored" data-anchor-id="local-remote">13. local / remote</h2>
+<p><code>-</code> local: 물리적으로 가까이 있음 + 네트워크 없이 접근</p>
+<ol type="1">
+<li>강의실에 있는 윈도우 컴퓨터</li>
+<li>여러분이 가지고 있는 노트북</li>
+</ol>
+<p><code>-</code> remote: 물리적으로 멀리 있음 + 네트워크를 통해 접근</p>
+<ol type="1">
+<li>제서버1 (210.???.???.???)</li>
+<li>제서버2 (210.???.???.???)</li>
+<li>학과서버 (210.???.???.???)</li>
+<li>구글코랩</li>
+<li>codespace</li>
+<li>github, google drive</li>
+</ol>
+<p><code>-</code> 구분이 딱 떨어지는건 아님.. 그냥 아래의 정도로 이해하면 좋음</p>
+<ul>
+<li>local = 가까이</li>
+<li>remote = 멀리</li>
+</ul>
+</section>
+<section id="실습실컴퓨터-sim-코드스페이스-sim-개인노트북" class="level2">
+<h2 class="anchored" data-anchor-id="실습실컴퓨터-sim-코드스페이스-sim-개인노트북">14. 실습실컴퓨터 <span class="math inline">\(\sim\)</span> 코드스페이스 <span class="math inline">\(\sim\)</span> 개인노트북</h2>
+<blockquote class="blockquote">
+<p>우리의 두 번째 리눅스 서버 얻기 (첫 서버는 코랩아닐까요?)</p>
+</blockquote>
+<p><code>-</code> 단계1: 실습실컴퓨터로 깃헙에 로그인</p>
+<ul>
+<li>깃헙이란? 그냥 구글드라이브 같이 파일을 저장하는 기능을 한다고 이해하자.. (틀린 설명입니다!)</li>
+</ul>
+<p><code>-</code> 단계2: New repository 를 이용하여 새로운 저장소를 만들자. 저장소 이름은 아무거나..</p>
+<ul>
+<li>저장소란?? 말그대로 파일,폴더들을 저장할 수 있는 것</li>
+<li>쉽게 생각하면 그냥 “큰” 폴더임.</li>
+<li>윈도우로 치면 <code>downloada</code>, <code>desktop</code>, 이런폴더들..</li>
+</ul>
+<p><img src="day1_files/figure-html/8c003d32-34d3-47a4-b5c6-449cf409d0a8-1-2e69c764-1149-4dfe-a8e9-7b8e5083c12b.png" class="img-fluid"></p>
+<p><code>-</code> 단계3: 만들어진 저장소를 기반으로 codespace 생성</p>
+<ul>
+<li>local = 실습실컴퓨터</li>
+<li>remote = codespace</li>
+</ul>
+<p><code>-</code> 단계4: codespace에서 아래의 명렁어들을 순서대로 실행하고 무엇을 의미하는지 공부하자.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> <span class="at">-a</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> .</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> .. </span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> sample</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">mkdir</span> asdf </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://raw.githubusercontent.com/guebin/DL2022/master/_notebooks/2022-09-08-rcmd_anal.csv</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="fu">cp</span> 2022-09-08-rcmd_anal.csv ./asdf </span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> ./asdf </span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> 2022-09-08-rcmd_anal.csv </span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span> <span class="at">-rf</span> asdf </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>명령어들을 <code>linux_commands.txt</code>에 저장하자.</p>
+<p><code>-</code> 단계5: 개인노트북으로 깃헙로그인</p>
+<ul>
+<li>local = 개인노트북</li>
+<li>remote = codespace</li>
+</ul>
+<p><code>-</code> 단계6: 다시 코드스페이스에 접근하여 <code>study_list.ipynb</code> 주피터노트북을 만들자. 리스트만드는 방법을 공부하자.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>lst <span class="op">=</span> [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>-</code> 단계7: <code>study_dict.py</code>파일을 만들자. dict만드는 방법을 공부하자.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 방법1</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>dct1 <span class="op">=</span> {<span class="st">'a'</span>:<span class="dv">1</span>, <span class="st">'b'</span>:<span class="dv">2</span>, <span class="st">'c'</span>:<span class="dv">3</span>}</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 방법2</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>dct2 <span class="op">=</span> <span class="bu">dict</span>(a<span class="op">=</span><span class="dv">1</span>,b<span class="op">=</span><span class="dv">2</span>,c<span class="op">=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code># 퀴즈1</code>: 다시 코드스페이스에 접근하여 <code>test.ipynb</code> 주피터노트북을 만들고 아래 경로에 존재하는 파일을 다운로드하라.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ex">https://raw.githubusercontent.com/guebin/DL2022/master/_notebooks/2022-09-08-rcmd_anal.csv</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>현재폴더에서 <code>asdf</code>폴더를 만들고 다운로드한 파일을 <code>asdf</code> 폴더로 옮겨라.</p>
+<p><code>(풀이1)</code></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">!wget</span> ~ </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ex">!mkdir</span> ~</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="ex">!cp</span> ~</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="ex">!rm</span> ~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>(풀이2)</code></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ex">!wget</span> ~ </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="ex">!mkdir</span> ~</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="ex">!mv</span> ~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>(풀이3)</code> – 사실 이거는 “asdf 폴더를 만들고 그안에 다운로드하는 방식”이라 문제에서 요구하는 동작이랑 좀 다르긴해요 (결과는 똑같지만)</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">!mkdir</span> ~</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="ex">!wget</span> ~ </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>#</code></p>
+</section>
+<section id="코드스페이스-rightarrow-깃헙-rightarrow-코랩" class="level2">
+<h2 class="anchored" data-anchor-id="코드스페이스-rightarrow-깃헙-rightarrow-코랩">15. 코드스페이스 <span class="math inline">\(\rightarrow\)</span> 깃헙 <span class="math inline">\(\rightarrow\)</span> 코랩</h2>
+<p><code>-</code> 코드스페이스에서 공부한 내용을 코랩에서 이어서 하고싶다.</p>
+<p><code>-</code> 단계1: 코드스페이스에 접근</p>
+<ul>
+<li>local = 개인노트북</li>
+<li>remote = codespace</li>
+</ul>
+<p><code>-</code> 단계2: 코드스페이스 <span class="math inline">\(\to\)</span> 깃헙 레포지토리</p>
+<ul>
+<li>local = codespace</li>
+<li>remote = github</li>
+</ul>
+<p><code>-</code> 단계3: 코랩 <span class="math inline">\(\leftarrow\)</span> 깃헙 레포지토리</p>
+<ul>
+<li>local = colab</li>
+<li>remote = github</li>
+</ul>
+<div class="sourceCode" id="cb18"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">!wget</span> ~~~~~</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>코랩에서 공부한 내용을 나중에 codespace에서 이어하려면 “코랩 <span class="math inline">\(\to\)</span> 깃헙” 의 과정이 가능해야함. 이건 다루지 않음.</p>
+</blockquote>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>강의노트의 숨은의도</strong>: local/remote 의 개념을 이해했으면..</p>
+</div>
+</div>
+</section>
+<section id="깃헙-rightarrow-코드스페이스" class="level2">
+<h2 class="anchored" data-anchor-id="깃헙-rightarrow-코드스페이스">16. 깃헙 <span class="math inline">\(\rightarrow\)</span> 코드스페이스</h2>
+<p><code>-</code> 깃헙과 구글드라이브의 첫번째 차이: 깃헙은 기본적으로 “공개” 되어 있음.</p>
+</section>
+<section id="깃헙추가기능1-블로그-업로드" class="level2">
+<h2 class="anchored" data-anchor-id="깃헙추가기능1-블로그-업로드">17. 깃헙추가기능1: 블로그 업로드</h2>
+<p><code>-</code> 깃헙과 구글드라이브의 두번째 차이: 깃헙은 단순한 저장소를 넘어 추가기능이 있음.</p>
+<p><code>-</code> 클론</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone <span class="pp">??</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>-</code> 몇 가지 변경</p>
+<ul>
+<li><code>index.qmd</code> 에서 자기소개 추가하기</li>
+<li><code>_quarto.yml</code>에서 블로그 타이틀 설정하기</li>
+</ul>
+<p><code>-</code> 변경사항 업데이트</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> .</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> publish <span class="at">--no-browser</span> <span class="at">--no-prompt</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="리눅스명령어-hw" class="level2">
+<h2 class="anchored" data-anchor-id="리눅스명령어-hw">18. 리눅스명령어 (hw)</h2>
+<p><code>-</code> 숙제: <code>hw1.ipynb</code> 파일 열어서 풀어보세요</p>
+<p><code>-</code> 공부한것을 바탕으로 포스트작성.</p>
+<pre><code>---
+title: "hw1 -- 여러가지 리눅스 명령어"
+author: "최규빈"
+date: "12/26/2024"
+---</code></pre>
+</section>
+<section id="vi-벼락치기" class="level2">
+<h2 class="anchored" data-anchor-id="vi-벼락치기">19. <code>vi</code> 벼락치기</h2>
+<p><code>-</code> <code>i</code>, <code>esc</code> 차이점.</p>
+<p><code>-</code> Vi를 이용하여 파일만들기, Vi를 이용하여 파일수정하기</p>
+<p><code>-</code> 복사 &amp; 붙여넣기</p>
+<p><code>-</code> Vi에서 편집후 저장 후 종료, 그냥 종료, 강제종료</p>
+<p><code>-</code> 찾기: <code>/asdf</code> <span class="math inline">\(\to\)</span> 엔터 <span class="math inline">\(\to\)</span> n / shift+n</p>
+<p><code>-</code> 단어끝으로 이동=e, 단어처음으로 이동=b</p>
+</section>
+<section id="업로드하기-귀찮지-않아요-.sh" class="level2">
+<h2 class="anchored" data-anchor-id="업로드하기-귀찮지-않아요-.sh">20. 업로드하기 귀찮지 않아요? <code>.sh</code></h2>
+</section>
+<section id="깃헙추가기능2-패키지-배포" class="level2">
+<h2 class="anchored" data-anchor-id="깃헙추가기능2-패키지-배포">21. 깃헙추가기능2: 패키지 배포</h2>
+<p><code>-</code> 깃헙과 구글드라이브의 두번째 차이: 깃헙은 단순한 저장소를 넘어 추가기능이 있음.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>강의노트의 숨은의도</strong>:</p>
+<ol type="1">
+<li>깃헙에 대한 이해 (저장소의 의미, 패키지작성)</li>
+<li>리눅스에 대한 이해 (명령어, vi, <code>.sh</code>)</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="서버접속" class="level2">
+<h2 class="anchored" data-anchor-id="서버접속">22. 서버접속</h2>
+<p><code>-</code> 접속하기</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> toolbox@210.117.173.182</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>-</code> 비밀번호는 jbnu</p>
+</section>
+<section id="서버접속2-개인-노트북" class="level2">
+<h2 class="anchored" data-anchor-id="서버접속2-개인-노트북">23. 서버접속2 (개인 노트북)</h2>
+<p><code>-</code> 휴대폰 테더링으로 인터넷연결하고 본인 노트북으로 해보세요.</p>
+<p><code>-</code> 실패할거에요</p>
+</section>
+<section id="실습14-183-컴퓨터-접속-passwd" class="level2">
+<h2 class="anchored" data-anchor-id="실습14-183-컴퓨터-접속-passwd">실습14: 183 컴퓨터 접속 + passwd</h2>
+<p><code>-</code> 183번 컴퓨터에 접속하기</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> <span class="pp">????</span>@<span class="pp">???</span>.<span class="pp">???</span>.<span class="pp">???</span>.183 </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>-</code> 비밀번호 변경하기</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">passwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="실습15-183에서-git의-설치-및-연결" class="level2">
+<h2 class="anchored" data-anchor-id="실습15-183에서-git의-설치-및-연결">실습15: 183에서 git의 설치 및 연결</h2>
+<div class="sourceCode" id="cb25"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span> git <span class="co"># git의 생성</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install git <span class="co"># git 설치</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get remove git <span class="co"># git 삭제 </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="실습16-183에서-quarto의-설치" class="level2">
+<h2 class="anchored" data-anchor-id="실습16-183에서-quarto의-설치">실습16: 183에서 quarto의 설치</h2>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">which</span> quarto </span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">wget</span> https://github.com/quarto-dev/quarto-cli/releases/download/v1.4.533/quarto-1.4.533-linux-amd64.deb</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-i</span> quarto-1.4.533-linux-amd64.deb </span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> dpkg <span class="at">-r</span> quarto </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="실습17-183에서-아나콘다-설치" class="level2">
+<h2 class="anchored" data-anchor-id="실습17-183에서-아나콘다-설치">실습17: 183에서 아나콘다 설치</h2>
+<p><code>-</code> https://www.anaconda.com/download &lt;- 여기서 다운받을 수 있는 주소 get 하세여</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> Anaconda3-2019.03-Linux-x86_64.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>-</code> 질문: Anaconda3와 git/quarto의 차이는?</p>
+</section>
+<section id="실습18-183에서-주피터랩-설치" class="level2">
+<h2 class="anchored" data-anchor-id="실습18-183에서-주피터랩-설치">실습18: 183에서 주피터랩 설치</h2>
+<p><code>-</code> 가상환경 셋팅</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create py310 python=3.10 <span class="co"># 가상환경생성 </span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate py310 <span class="co"># 가상환경 활성화 </span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge jupyterlab <span class="co"># 주피터랩설치</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>-</code> 접속하는 방법1</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> lab <span class="at">--ip</span> <span class="st">"0.0.0.0"</span> <span class="at">--port</span> <span class="dt">{8</span><span class="op">,</span><span class="dt">학번끝3자리}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>이후에</p>
+<p><code>http://127.0.0.1:8052/lab?token=????</code> 와 같은 주소 형식을 <code>http://210.117.173.183:8052/lab?token=????</code> 와 같이 바꾸고 들어오세요</p>
+<p><code>-</code> 접속하는 방법2</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> notebook password</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>를 이용하여 passwd를 설정한 뒤 다시 아래를 실행</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> lab <span class="at">--ip</span> <span class="st">"0.0.0.0"</span> <span class="at">--port</span> <span class="dt">{8</span><span class="op">,</span><span class="dt">학번끝3자리}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="실습21-주피터노트북파일에-이미지-넣기" class="level2">
+<h2 class="anchored" data-anchor-id="실습21-주피터노트북파일에-이미지-넣기">실습21: 주피터노트북파일에 이미지 넣기</h2>
+<p><code>-</code> 방법1</p>
+<div id="1c35a8a2-d707-4641-a89b-9aa298a73d96" class="cell" data-tags="[]" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>wget https:<span class="op">//</span>imgs.xkcd.com<span class="op">/</span>comics<span class="op">/</span>sandwich.png</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>--2024-01-03 14:08:48--  https://imgs.xkcd.com/comics/sandwich.png
+Resolving imgs.xkcd.com (imgs.xkcd.com)... 146.75.48.67, 2a04:4e42:7c::67
+Connecting to imgs.xkcd.com (imgs.xkcd.com)|146.75.48.67|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 11828 (12K) [image/png]
+Saving to: ‘sandwich.png’
+
+sandwich.png        100%[===================&gt;]  11.55K  --.-KB/s    in 0s      
+
+2024-01-03 14:08:48 (69.3 MB/s) - ‘sandwich.png’ saved [11828/11828]
+</code></pre>
+</div>
+</div>
+<p><img src="sandwich.png" class="img-fluid"></p>
+<p><code>-</code> 방법2</p>
+<p><img src="https://imgs.xkcd.com/comics/sandwich.png" class="img-fluid"></p>
+<p><code>-</code> 방법3: 스크린샷</p>
+</section>
+<section id="실습22-182-ssh차단-우회하기" class="level2">
+<h2 class="anchored" data-anchor-id="실습22-182-ssh차단-우회하기">실습22: 182 ssh차단 우회하기</h2>
+<p><code>-</code> 내용없음.</p>
+</section>
+<section id="실습25-186-컴퓨터-개발환경-셋팅하기-hw" class="level2">
+<h2 class="anchored" data-anchor-id="실습25-186-컴퓨터-개발환경-셋팅하기-hw">실습25: 186 컴퓨터 개발환경 셋팅하기 (HW)</h2>
+<p><code>-</code> ref: <a href="https://guebin.github.io/MP2023/offline/231128.html" class="uri">https://guebin.github.io/MP2023/offline/231128.html</a></p>
+<p>여기에서 2-E, 2-G 빼고 하기</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
