@@ -2,12 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/day1.html",
-      "/posts/day5.html",
-      "/posts/day6.html",
-      "/posts/day4.html",
-      "/posts/day3.html",
-      "/posts/day2.html"
+      "/posts/day1.html"
     ]
   }
 ]

@@ -6,7 +6,8 @@ website:
   title: "DSTBX2025"
   navbar:
     left: 
-      - day4.qmd
+      - text: " "
+        href: users.qmd
     right:
       - icon: github
         href: https://github.com/guebin/DSTBX2025
@@ -15,4 +16,8 @@ website:
 format:
   html:
     theme: cosmo
+    number-sections: true
     css: styles.css
+    toc: true
+    toc-location: right
+    toc-depth: 2

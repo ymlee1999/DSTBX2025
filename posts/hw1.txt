@@ -1,0 +1,43 @@
+아래를 실행해보고 사용방법을 확인하라. 
+
+# 1. head: 파일의 처음 몇 줄 출력
+head -n 3 sample.txt
+
+# 2. tail: 파일의 마지막 몇 줄 출력
+tail -n 3 sample.txt
+
+# 3. cat: 파일 내용 출력
+cat sample.txt
+
+# cat: 파일 합치기
+cat file1.txt file2.txt > combined.txt
+
+# 4. df -h: 디스크 사용량 확인
+df -h
+
+# 5. du -sh *: 디렉토리 및 파일 크기 확인
+du -sh *
+
+# 6. nvidia-smi: GPU 상태 확인
+nvidia-smi
+
+# 7. ps aux: 현재 실행 중인 프로세스 확인
+ps aux
+
+# 8. grep: 특정 문자열 검색
+grep "error" sample.txt
+
+# 9. |: 파이프를 사용하여 명령어 결합
+ps aux | grep python
+
+# 10. >: 출력 결과를 파일로 저장
+df -h > disk_usage.txt
+
+# 11. which: 명령어의 실행 파일 경로 확인
+which python
+
+# 12. find: 파일 검색
+find . -name "sample.txt"
+
+# 13. pwd: 현재 위치 확인
+pwd 
