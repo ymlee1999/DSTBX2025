@@ -901,26 +901,23 @@ Important
 </section>
 <section id="ssh-우회하기" class="level2" data-number="24">
 <h2 data-number="24" class="anchored" data-anchor-id="ssh-우회하기"><span class="header-section-number">24</span> <code>ssh</code> 우회하기</h2>
-<section id="내부와이파이" class="level3" data-number="24.1">
-<h3 data-number="24.1" class="anchored" data-anchor-id="내부와이파이"><span class="header-section-number">24.1</span> 내부와이파이</h3>
-<p><code>-</code> 182 접속해보기</p>
+<section id="기본상태" class="level3" data-number="24.1">
+<h3 data-number="24.1" class="anchored" data-anchor-id="기본상태"><span class="header-section-number">24.1</span> 기본상태</h3>
+<p><code>-</code> 내부와이파이에서 182 접속해보기 – 성공</p>
 <div class="sourceCode" id="cb36"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> toolbox@210.117.173.182</span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 비밀번호는 jbnu</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><code>-</code> 183 접속해보기</p>
+<p><code>-</code> 내부와이파이에서 183 접속해보기 – 성공</p>
 <div class="sourceCode" id="cb37"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> guebin@210.117.173.183</span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 비밀번호는 jbnu</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="외부와이파이" class="level3" data-number="24.2">
-<h3 data-number="24.2" class="anchored" data-anchor-id="외부와이파이"><span class="header-section-number">24.2</span> 외부와이파이</h3>
-<p><code>-</code> 182 접속해보기</p>
+<p><code>-</code> 외부와이파이에서 182 접속해보기 – 실패</p>
 <div class="sourceCode" id="cb38"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> toolbox@210.117.173.182</span>
 <span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 비밀번호는 jbnu</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><code>-</code> 183 접속해보기</p>
+<p><code>-</code> 외부와이파이에서 183 접속해보기 – 실패</p>
 <div class="sourceCode" id="cb39"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> guebin@210.117.173.183</span>
 <span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 비밀번호는 jbnu</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="포트변경" class="level3" data-number="24.3">
-<h3 data-number="24.3" class="anchored" data-anchor-id="포트변경"><span class="header-section-number">24.3</span> 182 - 포트변경</h3>
+<section id="포트변경" class="level3" data-number="24.2">
+<h3 data-number="24.2" class="anchored" data-anchor-id="포트변경"><span class="header-section-number">24.2</span> 182 - 포트변경</h3>
 <p><code>-</code> 포트변경 – 실습X</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -1037,16 +1034,27 @@ Note
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Port</span> 1226</span>
 <span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="sourceCode" id="cb42"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="ex">service</span> ssh restart</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><code>-</code> 내부와이파이에서 182접속하기</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> toolbox@210.117.173.182 <span class="at">-p</span> 1226 </span>
+</section>
+<section id="포트변경-이후" class="level3" data-number="24.3">
+<h3 data-number="24.3" class="anchored" data-anchor-id="포트변경-이후"><span class="header-section-number">24.3</span> 포트변경 이후</h3>
+<p><code>-</code> 내부와이파이에서 182접속하기 – 실패</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> toolbox@210.117.173.182</span>
 <span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 비밀번호는 jbnu</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><code>-</code> 외부와이파이에서 182접속하기</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> toolbox@210.117.173.182 <span class="at">-p</span> 1226</span>
+<p><code>-</code> 내부와이파이에서 182접속하기 – 성공, (문법이 조금 바뀌었네?)</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> toolbox@210.117.173.182 <span class="at">-p</span> 1226 </span>
 <span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 비밀번호는 jbnu</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><code>-</code> 내부와이파이에서 183접속하기</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> guebin@210.117.173.183</span>
+<p><code>-</code> 외부와이파이에서 182접속하기 – 성공!!</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> toolbox@210.117.173.182 <span class="at">-p</span> 1226</span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 비밀번호는 jbnu</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><code>-</code> 외부와이파이에서 183접속하기 (??)</p>
+<p><code>-</code> 내부와이파이에서 183접속하기 – 성공 (이건 원래 되던거였음)</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> guebin@210.117.173.183</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 비밀번호는 jbnu</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>-</code> 외부와이파이에서 183접속하기 (?? 못하지않나??)</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> guebin@210.117.173.183</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 비밀번호는 jbnu</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>그런데 할 수 있어요</p>
+</blockquote>
 </section>
 </section>
 <section id="서버셋팅" class="level2" data-number="25">
@@ -1054,14 +1062,14 @@ Note
 <section id="ssh-연결" class="level3" data-number="25.1">
 <h3 data-number="25.1" class="anchored" data-anchor-id="ssh-연결"><span class="header-section-number">25.1</span> ssh 연결</h3>
 <p><code>-</code> 183번 컴퓨터에 접속하기</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> guebin@210.117.173.183 </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> guebin@210.117.173.183 </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="password-변경" class="level3" data-number="25.2">
 <h3 data-number="25.2" class="anchored" data-anchor-id="password-변경"><span class="header-section-number">25.2</span> password 변경</h3>
 <p><code>-</code> 아래를 실행하여 비밀번호를 바꿀 것</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">passwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">passwd</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>-</code> 이후 ssh로 접속할때 바뀐 pw를 입력한다.</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> guebin@210.117.173.183</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> guebin@210.117.173.183</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="아나콘다-설치" class="level3" data-number="25.3">
 <h3 data-number="25.3" class="anchored" data-anchor-id="아나콘다-설치"><span class="header-section-number">25.3</span> 아나콘다 설치</h3>
@@ -1077,11 +1085,11 @@ Note
 <section id="주피터랩-설치-및-실행" class="level3" data-number="25.4">
 <h3 data-number="25.4" class="anchored" data-anchor-id="주피터랩-설치-및-실행"><span class="header-section-number">25.4</span> 주피터랩 설치 및 실행</h3>
 <p><code>-</code> 가상환경 셋팅</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> first <span class="co"># 가상환경생성 </span></span>
-<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate first <span class="co"># 가상환경 활성화 </span></span>
-<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge notebook <span class="co"># 주피터랩설치</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> first <span class="co"># 가상환경생성 </span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate first <span class="co"># 가상환경 활성화 </span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge notebook <span class="co"># 주피터랩설치</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>-</code> 접속하는 방법1: 토큰으로 접속</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> lab <span class="at">--ip</span> <span class="st">"0.0.0.0"</span> <span class="at">--port</span> <span class="dt">{8</span><span class="op">,</span><span class="dt">학번끝3자리}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> lab <span class="at">--ip</span> <span class="st">"0.0.0.0"</span> <span class="at">--port</span> <span class="dt">{8</span><span class="op">,</span><span class="dt">학번끝3자리}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>이후에</p>
 <ul>
 <li><code>http://127.0.0.1:8052/lab?token=????</code></li>
@@ -1092,9 +1100,9 @@ Note
 </ul>
 <p>와 같이 바꾸고 들어오세요</p>
 <p><code>-</code> 접속하는 방법2: password로 접속</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> notebook password</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> notebook password</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>를 이용하여 passwd를 설정한 뒤 다시 아래를 실행</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> lab <span class="at">--ip</span> <span class="st">"0.0.0.0"</span> <span class="at">--port</span> <span class="dt">{8</span><span class="op">,</span><span class="dt">학번끝3자리}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> lab <span class="at">--ip</span> <span class="st">"0.0.0.0"</span> <span class="at">--port</span> <span class="dt">{8</span><span class="op">,</span><span class="dt">학번끝3자리}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1115,14 +1123,14 @@ Important
 <section id="ssh-연결-1" class="level3" data-number="26.1">
 <h3 data-number="26.1" class="anchored" data-anchor-id="ssh-연결-1"><span class="header-section-number">26.1</span> ssh 연결</h3>
 <p><code>-</code> 186 컴퓨터에 접속하기</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> root@210.117.173.186 <span class="at">-p</span> {학번끝5자리}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> root@210.117.173.186 <span class="at">-p</span> {학번끝5자리}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="password-변경-1" class="level3" data-number="26.2">
 <h3 data-number="26.2" class="anchored" data-anchor-id="password-변경-1"><span class="header-section-number">26.2</span> password 변경</h3>
 <p><code>-</code> 아래를 실행하여 비밀번호를 바꿀 것</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">passwd</span> root</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">passwd</span> root</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>-</code> 이후 ssh로 접속할때 바뀐 pw를 입력한다.</p>
-<div class="sourceCode" id="cb55"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> root@210.117.173.186 <span class="at">-p</span> {학번끝5자리}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb57"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ssh</span> root@210.117.173.186 <span class="at">-p</span> {학번끝5자리}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="아나콘다-설치-1" class="level3" data-number="26.3">
 <h3 data-number="26.3" class="anchored" data-anchor-id="아나콘다-설치-1"><span class="header-section-number">26.3</span> 아나콘다 설치</h3>
@@ -1130,13 +1138,13 @@ Important
 <section id="주피터랩-설치-및-실행-1" class="level3" data-number="26.4">
 <h3 data-number="26.4" class="anchored" data-anchor-id="주피터랩-설치-및-실행-1"><span class="header-section-number">26.4</span> 주피터랩 설치 및 실행</h3>
 <p><code>-</code> 가상환경 셋팅</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> first <span class="co"># 가상환경생성 </span></span>
-<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate first <span class="co"># 가상환경 활성화 </span></span>
-<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge notebook <span class="co"># 주피터랩설치</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> first <span class="co"># 가상환경생성 </span></span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate first <span class="co"># 가상환경 활성화 </span></span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge notebook <span class="co"># 주피터랩설치</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>-</code> password 설정</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> notebook password</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> notebook password</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><code>-</code> 실행</p>
-<div class="sourceCode" id="cb58"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> lab <span class="at">--ip</span><span class="op">=</span><span class="st">"0.0.0.0"</span> <span class="at">--port</span><span class="op">=</span>{MY-PORT} <span class="at">--no-browser</span> <span class="at">--allow-root</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> lab <span class="at">--ip</span><span class="op">=</span><span class="st">"0.0.0.0"</span> <span class="at">--port</span><span class="op">=</span>{MY-PORT} <span class="at">--no-browser</span> <span class="at">--allow-root</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
