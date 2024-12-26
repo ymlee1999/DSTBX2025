@@ -196,10 +196,17 @@
     "text": "26 학과서버셋팅 (\\(\\star\\star\\star\\)) – hw\n\n26.1 ssh 연결\n- 186 컴퓨터에 접속하기\nssh root@210.117.173.186 -p {학번끝5자리}\n\n\n26.2 password 변경\n- 아래를 실행하여 비밀번호를 바꿀 것\npasswd root\n- 이후 ssh로 접속할때 바뀐 pw를 입력한다.\nssh root@210.117.173.186 -p {학번끝5자리}\n\n\n26.3 아나콘다 설치\n\n\n26.4 주피터랩 설치 및 실행\n- 가상환경 셋팅\nconda create -n first # 가상환경생성 \nconda activate first # 가상환경 활성화 \nconda install -c conda-forge notebook # 주피터랩설치\n- password 설정\njupyter notebook password\n- 실행\njupyter lab --ip=\"0.0.0.0\" --port={MY-PORT} --no-browser --allow-root\n\n\n\n\n\n\nNote\n\n\n\nport는 자신의 학번을 기준으로, 십의자리와 만의자리를 바꾸며 사용할 수 있음. 예를들어 학번끝 5자리가 43052라면\n만의자리변경\n\n23052\n33052\n53052\n\n십의자리변경\n\n43002\n43012\n43022\n43032\n43042\n43062\n43072\n43082\n43092\n\n에 해당하는 port번호를 쓸 수 있음.\n\n\n\n\n\n\n\n\nImportant\n\n\n\n사실 이 부분이 가장 실용적인 내용입니다. 이해할 것은 없지만.."
   },
   {
+    "objectID": "posts/day2.html",
+    "href": "posts/day2.html",
+    "title": "Day2: test",
+    "section": "",
+    "text": "1 3. cat: 파일 합치기\ncat file1.txt file2.txt &gt; combined.txt\n\n\n2 4. df -h: 디스크 사용량 확인"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "데이터과학 툴박스 (2025)",
     "section": "",
-    "text": "수업계획\n\n12월26일(화) – 10:00~16:30 day1 수업\n12월27일(수) – 10:00~16:30 day2 수업\n12월30일(목) – 10:00~16:30 day3 수업\n12월31일(금) – 10:00~16:30 day4 수업\n1월2일(월) – 10:00~16:30 Q&A\n\n\n\n\n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nDec 26, 2024\n\n\nDay1: 터미널의 이해 - 학과서버셋팅\n\n\n최규빈 \n\n\n\n\n\nNo matching items"
+    "text": "수업계획\n\n12월26일(화) – 10:00~16:30 day1 수업\n12월27일(수) – 10:00~16:30 day2 수업\n12월30일(목) – 10:00~16:30 day3 수업\n12월31일(금) – 10:00~16:30 day4 수업\n1월2일(월) – 10:00~16:30 Q&A\n\n\n\n\n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nDec 26, 2024\n\n\nDay2: test\n\n\n이영미 \n\n\n\n\nDec 26, 2024\n\n\nDay1: 터미널의 이해 - 학과서버셋팅\n\n\n최규빈 \n\n\n\n\n\nNo matching items"
   }
 ]
