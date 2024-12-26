@@ -200,13 +200,13 @@
     "href": "posts/day2.html",
     "title": "Day2: test",
     "section": "",
-    "text": "1 3. cat: 파일 합치기\ncat file1.txt file2.txt &gt; combined.txt\n\n\n2 4. df -h: 디스크 사용량 확인"
+    "text": "아래를 실행해보고 사용방법을 확인하라.\n\n1 1. head: 파일의 처음 몇 줄 출력\nhead -n 3 sample.txt\n\n\n2 2. tail: 파일의 마지막 몇 줄 출력\ntail -n 3 sample.txt\n\n\n3 3. cat: 파일 내용 출력\ncat sample.txt\n\n\n4 cat: 파일 합치기\ncat file1.txt file2.txt &gt; combined.txt\n\n\n5 4. df -h: 디스크 사용량 확인\ndf -h\n\n\n6 5. du -sh *: 디렉토리 및 파일 크기 확인\ndu -sh *\n\n\n7 6. nvidia-smi: GPU 상태 확인\nnvidia-smi\n\n\n8 7. ps aux: 현재 실행 중인 프로세스 확인\nps aux\n\n\n9 8. grep: 특정 문자열 검색\ngrep “error” sample.txt\n\n\n10 9. |: 파이프를 사용하여 명령어 결합\nps aux | grep python\n\n\n11 10. &gt;: 출력 결과를 파일로 저장\ndf -h &gt; disk_usage.txt\n\n\n12 11. which: 명령어의 실행 파일 경로 확인\nwhich python\n\n\n13 12. find: 파일 검색\nfind . -name “sample.txt”\n\n\n14 13. pwd: 현재 위치 확인\npwd"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "데이터과학 툴박스 (2025)",
     "section": "",
-    "text": "수업계획\n\n12월26일(화) – 10:00~16:30 day1 수업\n12월27일(수) – 10:00~16:30 day2 수업\n12월30일(목) – 10:00~16:30 day3 수업\n12월31일(금) – 10:00~16:30 day4 수업\n1월2일(월) – 10:00~16:30 Q&A\n\n\n\n\n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nDec 26, 2024\n\n\nDay2: test\n\n\n이영미 \n\n\n\n\nDec 26, 2024\n\n\nDay1: 터미널의 이해 - 학과서버셋팅\n\n\n최규빈 \n\n\n\n\n\nNo matching items"
+    "text": "수업계획\n\n12월26일(화) – 10:00~16:30 day1 수업\n12월27일(수) – 10:00~16:30 day2 수업\n12월30일(목) – 10:00~16:30 day3 수업\n12월31일(금) – 10:00~16:30 day4 수업\n1월2일(월) – 10:00~16:30 Q&A\n\n\n\n\n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nDec 26, 2024\n\n\nDay2: test\n\n\n이영미 \n\n\n\n\nDec 26, 2024\n\n\nDay1: 터미널의 이해 - 학과서버셋팅\n\n\n이영미 \n\n\n\n\n\nNo matching items"
   }
 ]
