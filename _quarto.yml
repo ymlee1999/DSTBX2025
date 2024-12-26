@@ -3,7 +3,8 @@ project:
   output-dir: docs
 
 website:
-  title: "DSTBX2025"
+  title: "DSTBX2025 Winter"
+  auther: "이영미"
   navbar:
     left: 
       - text: " "
